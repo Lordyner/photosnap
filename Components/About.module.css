@@ -1,0 +1,62 @@
+.aboutSection h1 {
+    color: var(--primary-color-3);
+    font-size: var(--heading-900);
+    line-height: var(--line-height-900);
+    font-family: 'LivvicBold';
+    font-weight: normal;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 5rem;
+}
+
+.wrapper p {
+    color: var(--primary-color-3);
+    text-align: center;
+    font-size: var(--body-400);
+    line-height: var(--line-height-600);
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .wrapper p {
+        max-width: 80%;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 11.313rem;
+        align-items: baseline;
+    }
+
+    .wrapper p {
+        text-align: left;
+        max-width: unset;
+        position: relative;
+    }
+
+    .wrapper p::before {
+        content: '';
+        position: absolute;
+        width: 0.25rem;
+        height: 3.125rem;
+        background-color: var(--primary-color-2);
+        transform: rotate(90deg);
+        top: -4.188rem;
+        left: 1.25rem;
+    }
+
+    .aboutSection h1 {
+        font-size: 4rem;
+    }
+}

@@ -1,0 +1,168 @@
+.footer {
+
+    background-color: var(--secondary-color-5);
+    color: var(--primary-color-3);
+    position: relative;
+
+    font-size: var(--body-400);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: var(--topAndBotPadding) var(--sidePadding);
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.copyRight {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    opacity: .6;
+}
+
+
+.links a,
+.socialLinks a {
+    color: var(--primary-color-3);
+    text-align: center;
+
+}
+
+.logoImg {
+    margin-inline: auto;
+}
+
+.link:hover,
+.icon:hover {
+    color: var(--primary-color-2);
+}
+
+.contactInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: .6;
+    padding-bottom: 1.5rem;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--primary-color-3);
+
+}
+
+.socialAndCopyrightContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logoAndLinksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contactInfoAndLinksContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .wrapper {
+        gap: 2rem;
+    }
+
+    .socialAndCopyrightContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 100%;
+    }
+
+    .contactInfoAndLinksContainer {
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 100%;
+    }
+
+    .logoAndLinksContainer {
+        justify-content: space-between;
+    }
+
+    .contactInformation {
+        padding-bottom: 0;
+        align-items: flex-end;
+    }
+
+    .logoImg {
+        width: 5.938rem;
+        height: 1.5rem;
+        margin-inline: unset;
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {
+
+
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        padding: 2.5rem;
+    }
+
+    .logoImg {
+        width: 10rem;
+        height: 2.5rem;
+    }
+
+    .links {
+        justify-content: start;
+    }
+
+    .contactInfoAndLinksContainer {
+        justify-content: start;
+        gap: 7.5rem;
+        min-width: fit-content;
+    }
+
+    .contactInformation {
+        align-items: start;
+    }
+
+    .socialAndCopyrightContainer {
+        min-width: fit-content;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .socialLinks {
+        justify-content: end;
+    }
+
+
+}

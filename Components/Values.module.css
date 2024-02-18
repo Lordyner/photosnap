@@ -1,0 +1,131 @@
+.valueSection {
+    background-color: var(--secondary-color-4);
+    position: relative;
+}
+
+
+.valueSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6.25rem;
+    height: 15.813rem;
+    background: url('/images/bg-pattern-home-3.svg') no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: var(--topAndBotPadding) var(--sidePadding);
+
+}
+
+.valueSection h2 {
+    color: var(--primary-color-3);
+    font-size: var(--heading-800);
+    line-height: var(--line-height-800);
+    font-family: 'LivvicBold';
+    font-weight: normal;
+    max-width: 70%;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.valueSection h2::before {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    width: 3.125rem;
+    height: 4px;
+    background-color: var(--primary-color-2);
+
+}
+
+.valueSection h3 {
+    color: var(--primary-color-2);
+    line-height: 1.75rem;
+}
+
+.valueSection p {
+    font-size: var(--body-400);
+    opacity: .8;
+    color: var(--primary-color-3);
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    gap: 3.25rem;
+
+    padding-top: 3.5rem;
+}
+
+.value {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+}
+
+.valueContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        padding-top: 6.5rem;
+        padding-bottom: 6.5rem;
+
+    }
+
+    .values {
+        margin-inline: H2auto;
+    }
+
+    .valueSection h2 {
+        max-width: 90%;
+    }
+
+    .value {
+        flex-direction: row;
+        text-align: unset;
+    }
+
+    .valueContent {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 9rem;
+        gap: 4rem;
+    }
+
+    .valueSection::before {
+        top: unset;
+        bottom: 0;
+    }
+
+    .values {
+        padding-top: unset;
+        margin-top: 2rem;
+        gap: 2rem;
+    }
+
+    .valueSection h2::before {
+        top: -3.375rem;
+    }
+
+
+}

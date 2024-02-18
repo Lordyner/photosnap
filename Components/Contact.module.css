@@ -1,0 +1,172 @@
+.container h1 {
+    font-size: var(--heading-900);
+    line-height: var(--line-height-900);
+    color: var(--primary-color-3)
+}
+
+.container h2 {
+    font-size: var(--heading-800);
+    line-height: var(--line-height-800);
+    color: var(--primary-color-2);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem var(--sidePadding) var(--topAndBotPadding) var(--sidePadding);
+    gap: 1rem;
+
+}
+
+.qualitiesAndFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+
+}
+
+
+.qualities {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 1.25rem;
+}
+
+.quality {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: var(--primary-color-3);
+}
+
+.form {
+    padding-top: 1.5rem;
+    min-width: 100%;
+}
+
+.form label {
+    display: none;
+}
+
+.formGroup {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: .25rem;
+    position: relative;
+}
+
+.fieldsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fieldsWrapper input,
+.fieldsWrapper textarea {
+    border: none;
+    border-radius: 0;
+    color: var(--primary-color-3);
+    border-bottom: 1px solid var(--primary-color-3);
+    background-color: inherit;
+    font-weight: var(--body-400);
+    cursor: pointer;
+    position: relative;
+    opacity: 1;
+}
+
+.fieldsWrapper input:focus,
+.fieldsWrapper textarea:focus {
+    border-bottom: 1px solid var(--secondary-color-1);
+    outline: none;
+    opacity: 1;
+}
+
+.fieldsWrapper input::placeholder,
+.fieldsWrapper textarea::placeholder {
+    color: var(--primary-color-3);
+    opacity: .5;
+    padding-left: 1rem;
+}
+
+.buttonWrapper {
+    padding-top: 1rem;
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        padding-bottom: 6rem;
+    }
+
+
+    .form {
+        min-width: auto;
+        width: 34rem;
+    }
+
+    .qualities {
+        min-width: 85%;
+        ;
+    }
+
+    .wrapper h1,
+    .wrapper h2 {
+        text-align: center;
+    }
+
+    .qualitiesAndFormContainer {
+        align-items: normal;
+        width: 32.813rem;
+
+    }
+
+
+}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1440px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 4rem;
+
+    }
+
+    .qualitiesAndFormContainer {
+        align-items: start;
+    }
+
+    .wrapper h1 {
+        font-size: 4rem;
+    }
+
+    .wrapper h2 {
+        font-size: 2rem;
+    }
+
+    .form {
+        padding-top: 0;
+    }
+
+    .qualitiesAndFormContainer {
+        gap: 0;
+    }
+
+    .qualities {
+        gap: .5rem;
+    }
+}

@@ -1,0 +1,54 @@
+.reminderSection {
+    background-color: var(--primary-color-2);
+    position: relative;
+    padding: var(--topAndBotPadding) var(--sidePadding);
+
+}
+
+.reminderSection::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 12.5rem;
+    height: 9rem;
+    background: url('../public/images/bg-pattern-home-6-about-5.svg') no-repeat;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+
+}
+
+.reminderSection h2 {
+    font-size: var(--heading-800);
+    line-height: var(--line-height-800);
+    font-family: 'LivvicBold';
+    font-weight: normal;
+    color: var(--secondary-color-4);
+}
+
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        padding-bottom: 0.75rem;
+
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .wrapper {
+        justify-content: space-around;
+        padding-bottom: 0;
+    }
+}

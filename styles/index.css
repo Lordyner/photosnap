@@ -1,0 +1,679 @@
+:root {
+    /* Colors */
+    --primary-color-1: #014E56;
+    --primary-color-2: #F67E7E;
+    --primary-color-3: #FFF;
+
+    --secondary-color-1: #79C8C7;
+    --secondary-color-2: #2C6269;
+    --secondary-color-3: #004047;
+    --secondary-color-4: #012F34;
+    --secondary-color-5: #002529;
+
+
+    /* Breakpoints */
+    --desktop: 1440px;
+    --laptop: 1040px;
+    --tablet: 768px;
+    --mobile: 375px;
+
+    /* Fonts size */
+    --heading-900: 2.5rem;
+    --heading-800: 2rem;
+    --heading-700: 3rem;
+    --heading-600: 1.125rem;
+
+    --body-500: 1.125rem;
+    --body-400: 0.938rem;
+
+    --line-height-900: 2.5rem;
+    --line-height-800: 2rem;
+    --line-height-700: 3rem;
+    --line-height-600: 1.75rem;
+    --line-height-500: 1.75rem;
+    --line-height-400: 1.563rem;
+
+    /* Padding */
+    --sidePadding: 1.5rem;
+    --topAndBotPadding: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        /* Fonts size */
+        --heading-900: 4rem;
+        --heading-700: 3rem;
+        --heading-600: 1.125rem;
+
+        --body-500: 1.125rem;
+        --body-400: 0.938rem;
+
+        --line-height-900: 3.5rem;
+        --line-height-700: 3rem;
+        --line-height-600: 1.75rem;
+        --line-height-500: 1.75rem;
+        --line-height-400: 1.563rem;
+
+        /* Padding */
+        --sidePadding: 5rem;
+        --topAndBotPadding: 4rem;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    :root {
+        /* Fonts size */
+        --heading-900: 6.25rem;
+        --heading-800: 3rem;
+        --heading-700: 3rem;
+        --heading-600: 1.125rem;
+
+        --body-500: 1.125rem;
+        --body-400: 1.125rem;
+
+        --line-height-900: 6.25rem;
+        --line-height-800: 3rem;
+        --line-height-700: 3rem;
+        --line-height-600: 1.75rem;
+        --line-height-500: 1.75rem;
+        --line-height-400: 1.563rem;
+
+        /* Padding */
+        --sidePadding: 10rem;
+        --topAndBotPadding: 4rem;
+    }
+}
+
+
+
+/* Font-family */
+@font-face {
+    font-family: LivvicBold;
+    src: url('../public/fonts/static/Livvic/Livvic-Bold.ttf');
+}
+
+@font-face {
+    font-family: LivvicSemiBold;
+    src: url('../public/fonts/static/Livvic/Livvic-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: LivvicMediumItalic;
+    src: url('../public/fonts/static/Livvic/Livvic-MediumItalic.ttf');
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: inherit; */
+    font-family: 'LivvicSemiBold';
+}
+
+img {
+    max-width: 100%;
+    display: block
+}
+
+
+html {
+    /* Bug : rentre en conflit avec le form validation (le message d'erreur ne s'affiche pas)  */
+    /* scroll-behavior: smooth; */
+    font-size: 100%;
+}
+
+body {
+    /* overflow-x: hidden; */
+    scroll-behavior: smooth;
+    font-size: var(--body-500);
+    line-height: var(--line-height-500);
+    line-height: 1.75rem;
+    position: relative;
+    z-index: 15;
+    background-color: var(--primary-color-1);
+
+}
+
+/* Titles */
+h1 {
+    font-family: 'LivvicBold';
+}
+
+
+/* Button */
+
+button {
+    padding: .75rem 1.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 3rem;
+    font-weight: 900;
+    font-family: 'LivvicBold';
+}
+
+button:hover,
+button:focus-visible {
+    transform: translateY(-4px);
+    transition: transform 250ms;
+
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+.primary-button-light {
+    background-color: var(--primary-color-1);
+    color: var(--primary-color-3);
+
+}
+
+.primary-button-light:hover,
+.primary-button-light:focus {
+    background-color: var(--primary-color-3);
+    color: var(--primary-color-1);
+}
+
+.primary-button-dark {
+    background-color: transparent;
+    border-color: var(--primary-color-3);
+    color: var(--primary-color-1);
+
+}
+
+.primary-button-dark:hover,
+.primary-button-dark:focus {
+    background-color: var(--primary-color-1);
+    color: var(--primary-color-3);
+}
+
+
+.secondary-button {
+    background-color: var(--primary-color-3);
+    color: var(--primary-color-1);
+}
+
+.secondary-button:hover,
+.secondary-button:focus {
+    background-color: var(--secondary-color-1);
+}
+
+a.primary-button-light {
+    padding: 0.5rem 2rem;
+    color: var(--primary-color-3);
+    border: 2px solid var(--primary-color-3);
+    background-color: transparent;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+a.primary-button-dark {
+    padding: .5rem 2rem;
+    color: var(--secondary-color-4);
+    border: 2px solid var(--secondary-color-4);
+    background-color: transparent;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Text fields */
+
+input,
+textarea {
+    /* all: unset; */
+    padding: .5em;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--primary-color-3);
+    opacity: .6;
+    color: var(--primary-color-3);
+}
+
+input:active,
+textarea:active {
+    opacity: 1;
+    border-color: var(--secondary-color-1);
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: var(--primary-color-2);
+    color: var(--primary-color-2);
+}
+
+
+textarea {
+    resize: none;
+}
+
+/* Check box */
+
+/* Customize the label (the container) */
+.checkboxContainer {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxContainer:hover input~.checkmark {
+    background-color: var(--primary-color-1);
+    opacity: .5;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxContainer input:checked~.checkmark {
+    background-color: var(--primary-color-1);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxContainer input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxContainer .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--primary-color-2);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+a {
+    text-decoration: none;
+}
+
+.dark-filter {
+    background-color: rgba(0, 0, 0, 23%);
+    transition: background-color .5s,
+}
+
+.overlay-loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(35, 31, 31, .5);
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+
+}
+
+
+.overlay-burger-menu {
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    position: fixed;
+    background-color: rgb(35, 31, 31, .6);
+    z-index: 30;
+    overflow-y: hidden;
+    transition: .4s ease-in-out;
+
+}
+
+.overlay-burger-menu.isActive {
+    right: 0;
+}
+
+
+main {
+    padding: 2rem 0;
+    margin: 0 var(--sidePadding);
+}
+
+.home {
+    padding-bottom: 10rem;
+}
+
+.containerNavAndHero {
+    position: relative;
+}
+
+.containerNavAndHero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6rem;
+    left: 0;
+    background-image: url('../public/images/bg-pattern-home-2.svg');
+    background-repeat: no-repeat;
+    background-position: center 0rem;
+    z-index: -1;
+
+}
+
+.pricing {
+    padding-bottom: 2rem;
+}
+
+
+.mainAboutSection {
+    position: relative;
+}
+
+.mainAboutSection::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -1.5rem;
+    height: 6.25rem;
+    width: 6.25rem;
+    background: url('../public/images/bg-pattern-about-1-mobile-nav-1.svg') no-repeat;
+    z-index: -1;
+
+
+}
+
+.contact {
+    position: relative;
+    padding-top: 1rem;
+    margin: 0;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -1.5rem;
+    width: 6.25rem;
+    height: 7.031rem;
+    background: url("../public/images/bg-pattern-contact-2.svg") no-repeat;
+    z-index: -1;
+}
+
+
+
+/* UTILS */
+
+.display-none {
+    display: none !important;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.f-col {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-end {
+    justify-content: end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.justify-self-start {
+    justify-self: flex-start;
+}
+
+.bottom-minus-2 {
+    bottom: -2rem;
+}
+
+.top-minus-2 {
+    top: -2rem;
+
+}
+
+.flex-grow-2 {
+    flex-grow: 2;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.pb-1 {
+    padding-bottom: 1rem;
+}
+
+.pl-1 {
+    padding-left: 1rem;
+}
+
+.pr-1 {
+    padding-right: 1rem;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+.gap-2 {
+    gap: 2rem;
+}
+
+.gap-3 {
+    gap: 3rem;
+}
+
+.gap-4 {
+    gap: 4rem;
+}
+
+.gap-5 {
+    gap: 5rem;
+}
+
+.gap-05 {
+    gap: .5rem
+}
+
+.max-width {
+    max-width: 69.375rem;
+    margin-inline: auto;
+}
+
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.h-100 {
+    min-height: 100svh;
+}
+
+.h-80 {
+    min-height: 80svh;
+}
+
+.min-height-fit-content {
+    min-height: fit-content;
+}
+
+
+/* Scrollbar for chrome */
+::-webkit-scrollbar {
+    width: .75rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: .5rem;
+    background-color: var(--lightGrey);
+    border: 1px solid #cacaca;
+    margin-block: .1em;
+
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+    background-color: #A0A0A0;
+}
+
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+    .mainAboutSection::before {
+        right: -5rem;
+        height: 12.5rem;
+    }
+
+
+    main {
+        padding-top: 5rem;
+    }
+
+    .home {
+        padding-bottom: 15rem;
+    }
+
+    .contact {
+        margin: 0 var(--sidePadding);
+    }
+
+    .contact::before {
+        height: 14.063rem;
+        right: -5rem;
+    }
+
+
+    .contact::after {
+        content: '';
+        position: absolute;
+        top: 4rem;
+        left: -11.25rem;
+        width: 12.5rem;
+        height: 12.5rem;
+        background: url("../public/images/bg-pattern-about-2-contact-1.svg") no-repeat;
+        z-index: -1;
+
+    }
+
+    .contact {
+        padding-top: 4rem;
+    }
+
+    .max-width {
+        max-width: 38rem;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .h-100 {
+        min-height: 100vh;
+    }
+
+    .h-80 {
+        min-height: 80vh;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+    .containerNavAndHero::after {
+        content: unset;
+    }
+
+    .containerNavAndHero {
+        position: relative;
+    }
+
+    .containerNavAndHero::before {
+        content: '';
+        position: absolute;
+        width: 12.5rem;
+        height: 12.5rem;
+        background-image: url('../public/images/bg-pattern-home-1.svg');
+        left: -7rem;
+        top: 16rem;
+    }
+
+    .mainAboutSection::before {
+        right: -10rem;
+    }
+
+    .contact {
+        flex: 1;
+    }
+
+    .contact::before {
+        right: -10rem;
+    }
+
+    .contact::after {
+        left: -16.25rem;
+    }
+
+    .contact-container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .max-width {
+        max-width: 69.375rem;
+        margin-inline: auto;
+    }
+
+
+}

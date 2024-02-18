@@ -1,0 +1,49 @@
+.clientsLogoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    padding-top: 3.063rem;
+
+}
+
+.logoGadgetsNow {
+    max-height: 2.438rem;
+}
+
+.clientsLogoContainer img {
+    object-fit: contain;
+    max-width: 9.563rem;
+    height: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .clientsLogoContainer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 3.75rem;
+        max-width: 100%;
+    }
+
+    .clientsLogoContainer img {
+        max-width: 6.25rem;
+    }
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    .clientsLogoContainer {
+
+
+        padding-top: 4rem;
+
+    }
+
+    .clientsLogoContainer img {
+        max-width: 10.313rem;
+    }
+
+}
