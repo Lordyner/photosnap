@@ -25,6 +25,8 @@
     z-index: 1;
     bottom: 0;
 
+    width: calc(100% - 4.126rem);
+
     color: var(--pure-white);
 }
 
@@ -43,4 +45,28 @@
     height: 1px;
     color: var(--pure-white);
     opacity: .25;
+    border-bottom: 1px solid;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.CTA {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: fit-content;
+    font-family: 'DMSansBold';
+    color: var(--pure-white);
+}
+
+.CTA::after {
+    content: '';
+    display: inline-block;
+    width: 2.625rem;
+    height: .75rem;
+    margin-left: 1rem;
+    background: url('../public/images/shared/desktop/arrow.svg') no-repeat;
+
 }

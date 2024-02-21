@@ -7,11 +7,12 @@ const ImageCard = ({ image, alt, title, author, CTA }) => {
     return (
         <div className={classes.card}>
             <Image src={image} alt={alt} className={classes.cardImg} />
+
             <div className={classes.text}>
                 <h3>{title}</h3>
                 <p className={classes.author}>by {author}</p>
                 <div className={classes.separator} />
-                <Link className='secondary-link-dark' href=''>{CTA}</Link>
+                <Link className={classes.CTA} href=''>{CTA}</Link>
             </div>
         </div>
     );
