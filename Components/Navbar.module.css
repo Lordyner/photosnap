@@ -1,6 +1,9 @@
 .header {
-    padding: 2.5rem var(--sidePadding) 0 var(--sidePadding);
-    background-color: var(--background-color);
+    padding: 1.75rem 1.5rem;
+    background-color: var(--pure-white);
+
+    position: relative;
+    z-index: 100;
 }
 
 .navbar {
@@ -9,67 +12,28 @@
 }
 
 .navWrapper {
-    position: relative;
-    z-index: 30;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
     align-items: center;
-    padding-bottom: 2rem;
-
-}
-
-a.link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    color: var(--primary-color-3);
-}
-
-.link:hover {
-    color: var(--primary-color-2);
-}
-
-.navLink {
-    display: flex;
-    gap: 2rem;
-}
-
-
-.link::before {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background-color: var(--primary-color);
-    transition: all .5s;
-
-}
-
-.link:hover::before {
-    width: 100%;
 }
 
 .mobileNav {
-    height: 100vh;
-    width: 52%;
+    width: 100%;
+    height: 15.813rem;
     position: fixed;
     z-index: 98;
-    top: 0;
-    right: -100%;
-    padding: 7rem 2rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    top: -30rem;
+    left: 0;
     transition: .5s ease-in-out;
-    background-color: var(--secondary-color-2);
+    background-color: var(--pure-white);
 }
 
 
 .mobileNav.active {
-    right: 0;
+    top: 4.5rem;
+
 }
 
 .mobileNav button {
@@ -79,40 +43,44 @@ a.link {
 .mobileNavWrapper {
     position: relative;
     height: inherit;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.mobileNavWrapper::before {
-    content: '';
-    position: absolute;
-    bottom: 7rem;
-    right: -2rem;
-    width: 6.25rem;
-    height: 12.5rem;
-    background: url('../public/images/bg-pattern-about-1-mobile-nav-1.svg') no-repeat;
-}
 
 .mobileLinks {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding-top: 2rem;
-    max-width: 90%;
-    margin-inline: auto;
-    position: relative;
+    align-items: center;
+    gap: 1.25rem;
+
+    padding-bottom: 1.25rem;
+}
+
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #979797;
+    margin-bottom: 1.25rem;
 }
 
 
 .mobileLink {
-    color: var(--primary-color-3);
+    color: var(--pure-black);
+    font-family: 'DMSansBold';
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .156rem;
+    line-height: normal;
 }
+
 
 .logoImg {
-    width: 8rem;
     object-fit: contain;
 }
-
-
-
 
 
 .navbar li {
@@ -123,7 +91,7 @@ a.link {
 .hamburger {
     position: relative;
     display: block;
-    width: 1.5rem;
+    width: 1.25rem;
     appearance: none;
     background: none;
     border: none;
@@ -132,21 +100,20 @@ a.link {
     z-index: 99;
 }
 
-.hamburger .bar,
-.hamburger:after,
-.hamburger:before {
+.hamburger::after,
+.hamburger::before {
     content: '';
     display: block;
     width: 100%;
-    height: 3px;
-    background-color: var(--primary-color-3);
-    margin: 5px 0;
+    height: 2px;
+    background-color: var(--pure-black);
+    margin: 4px 0;
     transition: .4s;
 }
 
 .hamburger.isActive:before {
-    transform: rotate(-45deg) translate(-5px, 7px);
-    background-color: var(--primary-color-3);
+    transform: rotate(-45deg) translate(2px, 1px);
+    background-color: var(--pure-black);
 
 }
 
@@ -155,54 +122,49 @@ a.link {
 }
 
 .hamburger.isActive:after {
-    background-color: var(--primary-color-3);
-    transform: rotate(45deg) translate(-4px, -7px);
+    background-color: var(--pure-black);
+    transform: rotate(45deg) translate(-3px, -7px);
 }
 
-.max-width {
-    max-width: 69.375rem;
-    margin-inline: auto;
-}
 
 @media (min-width: 768px) {
-    .navWrapper {
-        justify-content: space-between;
 
+    .header {
+        padding: 1rem 2.5rem;
     }
+
 
     .hamburger {
         display: none;
     }
 
-
-}
-
-@media (min-width: 1024px) {
-
-
     .navLink {
-        gap: 2.5rem;
+        display: flex;
+        gap: 2.313rem;
+        padding-right: 3.188rem;
+    }
+
+    .link {
+        font-size: .75rem;
+        font-family: 'DMSansBold';
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.125rem;
+        color: var(--pure-black);
+
+    }
+
+    .logo {
+        padding-right: 2.563rem;
     }
 
     .navWrapper {
-        padding-top: 0;
-        padding-bottom: 3rem;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
     }
 }
 
-@media (min-width: 1440px) {
 
-
-    .navWrapper {
-        padding-top: 0;
-        padding-bottom: 3rem;
-    }
-
-    .logoImg {
-        width: 10rem;
-    }
-
-    .header {
-        padding-top: 4.813rem;
-    }
-}
+@media (min-width: 1440px) {}

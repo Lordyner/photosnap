@@ -1,10 +1,7 @@
 .footer {
-
-    background-color: var(--secondary-color-5);
-    color: var(--primary-color-3);
+    background-color: var(--pure-black);
+    color: var(--pure-white);
     position: relative;
-
-    font-size: var(--body-400);
 }
 
 .wrapper {
@@ -40,7 +37,7 @@
 
 .links a,
 .socialLinks a {
-    color: var(--primary-color-3);
+    color: var(--pure-black);
     text-align: center;
 
 }
@@ -49,10 +46,6 @@
     margin-inline: auto;
 }
 
-.link:hover,
-.icon:hover {
-    color: var(--primary-color-2);
-}
 
 .contactInformation {
     display: flex;
@@ -64,7 +57,6 @@
 
 .icon {
     font-size: 1.5rem;
-    color: var(--primary-color-3);
 
 }
 
@@ -122,8 +114,6 @@
 
 
 }
-
-@media screen and (min-width: 1024px) {}
 
 @media screen and (min-width: 1440px) {
 

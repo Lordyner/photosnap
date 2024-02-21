@@ -9,7 +9,6 @@ export function GlobalContextProvider(props) {
 
     const [isMobileResolution, setIsMobileResolution] = useState();
     const [isTabletResolution, setIsTabletResolution] = useState();
-    const [isLaptopResolution, setIsLaptopResolution] = useState();
     const [isDesktopResolution, setIsDesktopResolution] = useState();
 
     const [showPopupConfirmation, setShowPopupConfirmation] = useState();
@@ -18,7 +17,6 @@ export function GlobalContextProvider(props) {
 
     const [mobileResolution] = useState(320);
     const [tabletResolution] = useState(768);
-    const [laptopResolution] = useState(1024);
     const [desktopResolution] = useState(1440);
 
     const toggleMenu = () => {
@@ -39,13 +37,12 @@ export function GlobalContextProvider(props) {
             isLoading, setIsLoading,
             isMobileResolution, setIsMobileResolution,
             isTabletResolution, setIsTabletResolution,
-            isLaptopResolution, setIsLaptopResolution,
             isDesktopResolution, setIsDesktopResolution,
             showPopupConfirmation, setShowPopupConfirmation,
             showPopupError, setShowPopupError,
             isMenuOpen, setIsMenuOpen,
             showPopupContactFormIncorrect, setShowPopupContactFormIncorrect,
-            mobileResolution, tabletResolution, laptopResolution, desktopResolution,
+            mobileResolution, tabletResolution, desktopResolution,
             toggleMenu
         }}>
             {props.children}

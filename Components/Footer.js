@@ -1,18 +1,15 @@
 import React, { useContext } from 'react';
 import classes from './Footer.module.css';
-import logo from '@/public/images/logo.svg';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-import iconFacebook from '@/public/images/icon-facebook.svg';
-import iconTwitter from '@/public/images/icon-twitter.svg';
-import iconPinterest from '@/public/images/icon-pinterest.svg';
+
 
 const Footer = () => {
     const { isDesktopResolution } = useContext(GlobalContext);
     return (
         <footer className={`${classes.footer}`}>
-            <div className={`${classes.wrapper} ${isDesktopResolution ? 'max-width' : ''}`}>
+            <div className={`${classes.wrapper}`}>
                 <div className={classes.contactInfoAndLinksContainer}>
                     <div className={classes.logoAndLinksContainer}>
                         <Link href="/">
@@ -20,7 +17,7 @@ const Footer = () => {
                         </Link>
                         <div className={`${classes.links}`}>
                             <Link href="/" className={classes.link}>home</Link>
-                            <Link href="/about" className={classes.link}>about</Link>
+                            <Link href="/" className={classes.link}>about</Link>
                         </div>
                     </div>
                     <div className={classes.contactInformation}>
