@@ -10,7 +10,7 @@ const Hero = ({ image, alt, title, text, CTA, theme, withMainAccent, heroGridCla
 
         <div className={`hero ${theme} ${heroGridClass}`}>
             <div className={`${withMainAccent ? 'mainAccent' : ''} heroText max-width grid-text`}>
-                <h1>{title}</h1>
+                <h2>{title}</h2>
                 <div className='heroTextContent'>
                     <p>{text}</p>
                     {CTA && <Link href="#" className={`secondary-link ${theme}`}>{CTA}</Link>}

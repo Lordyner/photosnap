@@ -17,7 +17,20 @@ import cameramanMobile from '@/public/images/home/mobile/designed-for-everyone.j
 import cameramanTablet from '@/public/images/home/tablet/designed-for-everyone.jpg';
 import cameramanDesktop from '@/public/images/home/desktop/designed-for-everyone.jpg';
 
+import mountainsMobile from '@/public/images/stories/mobile/mountains.jpg';
+import mountainsDesktop from '@/public/images/stories/desktop/mountains.jpg';
+
+import cityMobile from '@/public/images/stories/mobile/cityscapes.jpg';
+import cityDesktop from '@/public/images/stories/desktop/cityscapes.jpg';
+
+import voyageMobile from '@/public/images/stories/mobile/18-days-voyage.jpg';
+import voyageDesktop from '@/public/images/stories/desktop/18-days-voyage.jpg';
+
+import architecturalsMobile from '@/public/images/stories/mobile/architecturals.jpg';
+import architecturalsDesktop from '@/public/images/stories/desktop/architecturals.jpg';
+
 import Hero from '@/Components/Hero'
+import ImageCardContainer from '@/Components/ImageCardContainer'
 
 
 export default function Home() {
@@ -63,7 +76,36 @@ export default function Home() {
     console.log()
   }, [screenWidth])
 
-
+  const cards = [
+    {
+      image: isMobileResolution ? mountainsMobile : mountainsDesktop,
+      alt: 'mountains',
+      title: 'The Mountains',
+      author: 'John Appleseed',
+      CTA: 'Read story'
+    },
+    {
+      image: isMobileResolution ? cityMobile : cityDesktop,
+      alt: 'city',
+      title: 'Sunset Cityscapes',
+      author: 'Benjamin Cruz',
+      CTA: 'Read story'
+    },
+    {
+      image: isMobileResolution ? voyageMobile : voyageDesktop,
+      alt: 'voyage',
+      title: '18 Days Voyage',
+      author: 'Alexei Borodin',
+      CTA: 'Read story'
+    },
+    {
+      image: isMobileResolution ? architecturalsMobile : architecturalsDesktop,
+      alt: 'architecturals',
+      title: 'Architecturals',
+      author: 'Samantha Brooke',
+      CTA: 'Read story'
+    }
+  ]
   return (
     <>
       <Head>
@@ -105,7 +147,7 @@ export default function Home() {
         heroGridClass={'textFirst'}
 
       />
-
+      <ImageCardContainer cards={cards}></ImageCardContainer>
 
     </>
   )

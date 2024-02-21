@@ -209,7 +209,7 @@ a.secondary-link.light::after {
     color: var(--pure-black);
 }
 
-.hero h1 {
+.hero h2 {
     font-size: var(--heading-900);
     line-height: var(--line-height-heading-900);
     letter-spacing: var(--letter-spacing-heading-900);
