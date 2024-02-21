@@ -30,9 +30,9 @@ const Navbar = () => {
                     {/* Classic links */}
                     <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
 
-                        <Link href="/stories" className={classes.link}>Stories</Link>
-                        <Link href="/features" className={classes.link}>Features</Link>
-                        <Link href="/pricing" className={classes.link}>Pricing</Link>
+                        <Link href="/" className={classes.link}>Stories</Link>
+                        <Link href="/" className={classes.link}>Features</Link>
+                        <Link href="/" className={classes.link}>Pricing</Link>
                     </div>
                     <div className={`${isMobileResolution ? "display-none" : ""}`}>
                         <Link href="/" className='primary-link-light'>get an invite</Link>
