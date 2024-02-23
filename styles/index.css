@@ -407,13 +407,13 @@ a.secondary-link.light::after {
     .hero.imgFirst {
         display: grid;
         grid-template-areas: 'image textHero';
-        grid-template-columns: max-content 1fr;
+        grid-template-columns: 35.5% 64.5%;
     }
 
     .hero.textFirst {
         display: grid;
         grid-template-areas: 'textHero image';
-        grid-template-columns: 1fr max-content;
+        grid-template-columns: 64.5% 35.5%;
     }
 
     .grid-image {
@@ -461,6 +461,19 @@ a.secondary-link.light::after {
     .heroText {
         padding-left: 7rem;
         padding-right: 7rem;
+    }
+
+
+    .hero.imgFirst {
+        display: grid;
+        grid-template-areas: 'image textHero';
+        grid-template-columns: 57.6% 42.4%;
+    }
+
+    .hero.textFirst {
+        display: grid;
+        grid-template-areas: 'textHero image';
+        grid-template-columns: 42.4% 57.6%;
     }
 
 
