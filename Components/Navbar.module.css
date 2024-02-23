@@ -160,11 +160,29 @@
     }
 
     .navWrapper {
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         gap: 0;
     }
 }
 
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+    .logo {
+        padding-right: 0;
+    }
+
+    .navLink {
+
+        padding-right: 0;
+    }
+
+    .navWrapper {
+        justify-content: space-around;
+
+    }
+
+    .link:hover {
+        color: var(--light-grey);
+    }
+}
