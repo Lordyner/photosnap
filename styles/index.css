@@ -265,6 +265,7 @@ a.secondary-link.light::after {
     object-fit: cover;
     height: auto;
     margin-inline: auto;
+    width: 100%;
 }
 
 
@@ -444,7 +445,10 @@ a.secondary-link.light::after {
         bottom: 0rem;
         rotate: 90deg;
         height: 0.375rem;
+    }
 
+    .heroImg {
+        height: revert-layer;
     }
 }
 

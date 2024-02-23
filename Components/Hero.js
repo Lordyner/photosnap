@@ -9,7 +9,7 @@ const Hero = ({ image, alt, title, text, CTA, theme, withMainAccent, heroGridCla
         // TODO add a prop to change color of bg and text
 
         <div className={`hero ${theme} ${heroGridClass}`}>
-            <div className={`${withMainAccent ? 'mainAccent' : ''} heroText max-width grid-text`}>
+            <div className={`${withMainAccent ? 'mainAccent' : ''} heroText grid-text`}>
                 <h2>{title}</h2>
                 <div className='heroTextContent'>
                     <p>{text}</p>
