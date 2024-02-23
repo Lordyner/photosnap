@@ -18,15 +18,19 @@ import cameramanTablet from '@/public/images/home/tablet/designed-for-everyone.j
 import cameramanDesktop from '@/public/images/home/desktop/designed-for-everyone.jpg';
 
 import mountainsMobile from '@/public/images/stories/mobile/mountains.jpg';
+import mountainsTablet from '@/public/images/stories/tablet/mountains.jpg';
 import mountainsDesktop from '@/public/images/stories/desktop/mountains.jpg';
 
 import cityMobile from '@/public/images/stories/mobile/cityscapes.jpg';
+import cityTablet from '@/public/images/stories/tablet/cityscapes.jpg';
 import cityDesktop from '@/public/images/stories/desktop/cityscapes.jpg';
 
 import voyageMobile from '@/public/images/stories/mobile/18-days-voyage.jpg';
+import voyageTablet from '@/public/images/stories/tablet/18-days-voyage.jpg';
 import voyageDesktop from '@/public/images/stories/desktop/18-days-voyage.jpg';
 
 import architecturalsMobile from '@/public/images/stories/mobile/architecturals.jpg';
+import architecturalsTablet from '@/public/images/stories/tablet/architecturals.jpg';
 import architecturalsDesktop from '@/public/images/stories/desktop/architecturals.jpg';
 
 import Hero from '@/Components/Hero'
@@ -78,32 +82,36 @@ export default function Home() {
 
   const cards = [
     {
-      image: isMobileResolution ? mountainsMobile : mountainsDesktop,
+      image: isMobileResolution ? mountainsMobile : isTabletResolution ? mountainsTablet : mountainsDesktop,
       alt: 'mountains',
       title: 'The Mountains',
       author: 'John Appleseed',
-      CTA: 'Read story'
+      CTA: 'Read story',
+      imageClassName: 'mountain'
     },
     {
-      image: isMobileResolution ? cityMobile : cityDesktop,
+      image: isMobileResolution ? cityMobile : isTabletResolution ? cityTablet : cityDesktop,
       alt: 'city',
       title: 'Sunset Cityscapes',
       author: 'Benjamin Cruz',
-      CTA: 'Read story'
+      CTA: 'Read story',
+      imageClassName: 'cityscapes'
     },
     {
-      image: isMobileResolution ? voyageMobile : voyageDesktop,
+      image: isMobileResolution ? voyageMobile : isTabletResolution ? voyageTablet : voyageDesktop,
       alt: 'voyage',
       title: '18 Days Voyage',
       author: 'Alexei Borodin',
-      CTA: 'Read story'
+      CTA: 'Read story',
+      imageClassName: 'voyage'
     },
     {
-      image: isMobileResolution ? architecturalsMobile : architecturalsDesktop,
+      image: isMobileResolution ? architecturalsMobile : isTabletResolution ? architecturalsTablet : architecturalsDesktop,
       alt: 'architecturals',
       title: 'Architecturals',
       author: 'Samantha Brooke',
-      CTA: 'Read story'
+      CTA: 'Read story',
+      imageClassName: 'architecturals'
     }
   ]
   return (
@@ -147,7 +155,7 @@ export default function Home() {
         heroGridClass={'textFirst'}
 
       />
-      <ImageCardContainer cards={cards}></ImageCardContainer>
+      {/* <ImageCardContainer cards={cards}></ImageCardContainer> */}
 
     </>
   )
