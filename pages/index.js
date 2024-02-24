@@ -35,8 +35,15 @@ import architecturalsMobile from '@/public/images/stories/mobile/architecturals.
 import architecturalsTablet from '@/public/images/stories/tablet/architecturals.jpg';
 import architecturalsDesktop from '@/public/images/stories/desktop/architecturals.jpg';
 
+import responsiveLogo from '@/public/images/features/desktop/responsive.svg';
+import noLimitLogo from '@/public/images/features/desktop/no-limit.svg';
+import embedLogo from '@/public/images/features/desktop/embed.svg';
+
+
 import Hero from '@/Components/Hero'
 import ImageCardContainer from '@/Components/ImageCardContainer'
+import Features from '@/Components/Features'
+import Footer from '@/Components/Footer'
 
 
 export default function Home() {
@@ -116,6 +123,27 @@ export default function Home() {
       imageClassName: 'architecturals'
     }
   ]
+
+  const features = [
+    {
+      image: responsiveLogo,
+      alt: 'responsive logo',
+      title: '100% Responsive',
+      description: 'No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.'
+    },
+    {
+      image: noLimitLogo,
+      alt: 'no limit logo',
+      title: 'No Photo Upload Limit',
+      description: 'Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.'
+    },
+    {
+      image: embedLogo,
+      alt: 'embed logo',
+      title: 'Available to Embed',
+      description: 'Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. '
+    }
+  ]
   return (
     <>
       <Head>
@@ -158,7 +186,8 @@ export default function Home() {
 
       />
       <ImageCardContainer cards={cards}></ImageCardContainer>
-
+      <Features features={features} />
+      <Footer />
     </>
   )
 }
