@@ -2,13 +2,19 @@ import React from 'react';
 import classes from './ImageCard.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const ImageCard = ({ image, alt, title, author, CTA }) => {
 
 
 
     return (
-        <div className={`${classes.card} `}>
+        <motion.div
+            whileHover={{
+                y: -24,
+                transition: { duration: 0.25 }
+            }}
+            className={`${classes.card} `}>
             <Image src={image} alt={alt} className={classes.cardImg} />
             <div className={classes.text}>
                 <h3>{title}</h3>
@@ -19,7 +25,7 @@ const ImageCard = ({ image, alt, title, author, CTA }) => {
                     <p className={classes.arrowCTA}></p>
                 </Link>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -6,6 +6,8 @@ import { useRouter } from 'next/router'
 import Navbar from '@/Components/Navbar'
 
 import guyInFrontOfLakeMobile from '@/public/images/home/mobile/create-and-share.jpg';
+//import guyInFrontOfLakeMobile from '@/public/images/home/mobile/enlarge_create-and-share.jpg';
+
 import guyInFrontOfLakeTablet from '@/public/images/home/tablet/create-and-share.jpg';
 import guyInFrontOfLakeDesktop from '@/public/images/home/desktop/create-and-share.jpg';
 
@@ -155,7 +157,7 @@ export default function Home() {
         heroGridClass={'textFirst'}
 
       />
-      {/* <ImageCardContainer cards={cards}></ImageCardContainer> */}
+      <ImageCardContainer cards={cards}></ImageCardContainer>
 
     </>
   )
