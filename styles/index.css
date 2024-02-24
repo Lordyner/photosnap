@@ -145,6 +145,7 @@ a.secondary-link {
     text-decoration: none;
     width: fit-content;
     font-family: 'DMSansBold';
+    line-height: normal;
 }
 
 a.secondary-link:hover {
@@ -253,6 +254,8 @@ a.secondary-link.light::after {
     height: .375rem;
     background: var(--main-accent);
 }
+
+
 
 .hero.dark p {
     opacity: .6;
@@ -389,6 +392,11 @@ a.secondary-link.light::after {
     gap: .5rem
 }
 
+.min-width-max-content {
+
+    min-width: max-content;
+}
+
 /* .max-width {
     max-width: 23.438rem;
     margin-inline: auto;
@@ -473,6 +481,12 @@ a.secondary-link.light::after {
         bottom: 0rem;
         rotate: 90deg;
         height: 0.375rem;
+    }
+
+    .mainAccent.smallerAccent::before {
+        top: 15.5rem;
+        width: 8.5rem;
+        left: -4.1rem;
     }
 
     .heroImg {

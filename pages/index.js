@@ -42,8 +42,8 @@ import embedLogo from '@/public/images/features/desktop/embed.svg';
 
 import Hero from '@/Components/Hero'
 import ImageCardContainer from '@/Components/ImageCardContainer'
-import Features from '@/Components/Features'
 import Footer from '@/Components/Footer'
+import FeaturesComponent from '@/Components/FeaturesComponent'
 
 
 export default function Home() {
@@ -186,7 +186,7 @@ export default function Home() {
 
       />
       <ImageCardContainer cards={cards}></ImageCardContainer>
-      <Features features={features} />
+      <FeaturesComponent features={features} />
       <Footer />
     </>
   )

@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Features.module.css';
 import Feature from './Feature';
-const Features = ({ features }) => {
+const FeaturesComponent = ({ features, page }) => {
     return (
-        <section className={`${classes.features} max-width`}>
+        <section className={`${classes.features} max-width ${page === 'feature' ? classes.doubleColumnTablet : ''}`}>
             {features.map((feature, index) => {
                 return (
                     <Feature key={index} image={feature.image} alt={feature.alt} title={feature.title} description={feature.description} />
@@ -13,4 +13,4 @@ const Features = ({ features }) => {
     );
 };
 
-export default Features;
+export default FeaturesComponent;

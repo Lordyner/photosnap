@@ -6,10 +6,30 @@
     padding: 5rem 2rem;
 }
 
+@media screen and (min-width: 768px) {
+    .features.doubleColumnTablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 4.5rem;
+        column-gap: 0.688rem;
+        padding: 7rem 2.5rem;
+
+    }
+
+}
+
 @media screen and (min-width: 1440px) {
+
     .features {
         flex-direction: row;
         gap: 1.875rem;
     }
+
+    .features.doubleColumnTablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10rem 10.313rem;
+    }
+
 
 }

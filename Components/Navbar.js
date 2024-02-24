@@ -31,7 +31,7 @@ const Navbar = () => {
                     <div className={`${isMobileResolution ? "display-none" : classes.navLink}`}>
 
                         <Link href="/stories" className={classes.link}>Stories</Link>
-                        <Link href="/" className={classes.link}>Features</Link>
+                        <Link href="/features" className={classes.link}>Features</Link>
                         <Link href="/" className={classes.link}>Pricing</Link>
                     </div>
                     <div className={`${isMobileResolution ? "display-none" : ""}`}>
@@ -53,12 +53,12 @@ const Navbar = () => {
                     <div className={`${classes.mobileNav} ${isMenuOpen ? classes.active : ""}`}>
                         <div className={classes.mobileNavWrapper}>
                             <div className={classes.mobileLinks}>
-                                <Link href="/" className={classes.mobileLink} onClick={() => {
+                                <Link href="/stories" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>Stories</Link>
 
-                                <Link href="/" className={classes.mobileLink} onClick={() => {
+                                <Link href="/features" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>Features</Link>

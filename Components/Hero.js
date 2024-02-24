@@ -2,14 +2,11 @@ import React from 'react';
 import classes from './Hero.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-const Hero = ({ image, alt, title, text, CTA, theme, withMainAccent, heroGridClass }) => {
+const Hero = ({ image, alt, title, text, CTA, theme, withMainAccent, heroGridClass, mainAccentClass }) => {
 
     return (
-        // TODO rename Hero component so it could be reused through the page
-        // TODO add a prop to change color of bg and text
-
         <div className={`hero ${theme} ${heroGridClass}`}>
-            <div className={`${withMainAccent ? 'mainAccent' : ''} heroText grid-text`}>
+            <div className={`${withMainAccent ? 'mainAccent ' + mainAccentClass : ''} heroText grid-text`}>
                 <h2>{title}</h2>
                 <div className='heroTextContent'>
                     <p>{text}</p>
