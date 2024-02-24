@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const ImageCard = ({ image, alt, title, author, CTA }) => {
+const ImageCard = ({ image, alt, title, author, CTA, date }) => {
 
 
 
@@ -17,8 +17,11 @@ const ImageCard = ({ image, alt, title, author, CTA }) => {
             className={`${classes.card} `}>
             <Image src={image} alt={alt} className={classes.cardImg} />
             <div className={classes.text}>
-                <h3>{title}</h3>
-                <p className={classes.author}>by {author}</p>
+                <div className={classes.info}>
+                    {date && <p className={classes.date}>{date}</p>}
+                    <h3>{title}</h3>
+                    <p className={classes.author}>by {author}</p>
+                </div>
                 <div className={classes.separator} />
                 <Link className={classes.CTA} href=''>
                     <p className={classes.textCTA}>{CTA}</p>

@@ -193,12 +193,13 @@ a.secondary-link.light::after {
 }
 
 /* Style for hero component */
-
+.heroStories,
 .hero {
     display: flex;
     flex-direction: column-reverse;
 }
 
+.heroStories,
 .hero.dark {
     background-color: var(--pure-black);
     color: var(--pure-white);
@@ -209,6 +210,7 @@ a.secondary-link.light::after {
     color: var(--pure-black);
 }
 
+.heroStories h1,
 .hero h2 {
     font-size: var(--heading-900);
     line-height: var(--line-height-heading-900);
@@ -268,6 +270,32 @@ a.secondary-link.light::after {
     width: 100%;
 }
 
+.heroStories .preTitle {
+    font-size: .75rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    opacity: 1;
+    color: var(--pure-white);
+    line-height: normal;
+}
+
+.heroStories .heroText {
+    padding: 3rem 1.75rem;
+}
+
+.heroStories .heroTextContent p {
+    padding-top: .5rem;
+}
+
+.heroDateAndAuthor {
+    display: flex;
+    gap: 0.5rem;
+    line-height: normal;
+}
+
+.author {
+    opacity: 1 !important;
+}
 
 
 /* UTILS */
@@ -450,6 +478,42 @@ a.secondary-link.light::after {
     .heroImg {
         height: revert-layer;
     }
+
+
+    /* Hero stories */
+
+    .heroStories {
+        padding: 7.625rem 2.5rem;
+        background-image: url('../public/images/stories/tablet/moon-of-appalacia.jpg');
+        background-size: cover;
+    }
+
+    .heroStories .heroText {
+        max-width: 25.375rem;
+        padding: 0;
+        gap: 0;
+    }
+
+    .heroStories .heroTextContent {
+        gap: 1.438rem;
+    }
+
+    .heroStories .heroTextContent p {
+        padding: 0;
+    }
+
+    .preTitle {
+        padding-bottom: 1.5rem;
+    }
+
+    .heroStories h1 {
+        padding-bottom: 1rem;
+    }
+
+    .heroDateAndAuthor {
+        padding-bottom: 1.5rem;
+    }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -475,6 +539,13 @@ a.secondary-link.light::after {
         grid-template-areas: 'textHero image';
         grid-template-columns: 42.4% 57.6%;
     }
+
+    .heroStories {
+        padding: 7.625rem 7rem;
+        background-image: url('../public/images/stories/desktop/moon-of-appalacia.jpg');
+        background-size: cover;
+    }
+
 
 
 }

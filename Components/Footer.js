@@ -23,7 +23,7 @@ const Footer = () => {
                     <div className={classes.socialsAndLinks}>
                         <div className={classes.links}>
                             <Link href='/' className={classes.link}>Home</Link>
-                            <Link href='/' className={classes.link}>Stories</Link>
+                            <Link href='/stories' className={classes.link}>Stories</Link>
                             <Link href='/' className={classes.link}>Features</Link>
                             <Link href='/' className={classes.link}>Pricing</Link>
                         </div>

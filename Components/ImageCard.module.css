@@ -76,6 +76,17 @@
     margin-bottom: 1rem;
 }
 
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.date {
+    font-size: 0.813rem;
+    line-height: normal;
+}
+
 
 .CTA {
     font-size: 0.75rem;

@@ -7,7 +7,7 @@ const ImageCardContainer = ({ cards }) => {
         <div className={classes.container}>
             {cards.map((card, index) => {
                 return (
-                    <ImageCard key={index} image={card.image} alt={card.alt} title={card.title} author={card.author} CTA={card.CTA} imageClassName={card.imageClassName} />
+                    <ImageCard key={index} image={card.image} alt={card.alt} title={card.title} author={card.author} CTA={card.CTA} imageClassName={card.imageClassName} date={card?.date} />
                 )
             })}
         </div>
