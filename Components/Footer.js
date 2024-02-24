@@ -3,43 +3,54 @@ import classes from './Footer.module.css';
 import Image from 'next/image';
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
-
+import logo from '@/public/images/shared/desktop/logo_white.svg';
+import iconFacebook from '@/public/images/shared/desktop/facebook.svg';
+import iconPinterest from '@/public/images/shared/desktop/pinterest.svg';
+import iconTwitter from '@/public/images/shared/desktop/twitter.svg';
+import iconYoutube from '@/public/images/shared/desktop/youtube.svg';
+import iconInstagram from '@/public/images/shared/desktop/instagram.svg';
 
 const Footer = () => {
     const { isDesktopResolution } = useContext(GlobalContext);
     return (
         <footer className={`${classes.footer}`}>
-            <div className={`${classes.wrapper}`}>
-                <div className={classes.contactInfoAndLinksContainer}>
-                    <div className={classes.logoAndLinksContainer}>
-                        <Link href="/">
-                            <Image src={logo} alt='logo payAPI' className={classes.logoImg} width={160} height={40} />
-                        </Link>
-                        <div className={`${classes.links}`}>
-                            <Link href="/" className={classes.link}>home</Link>
-                            <Link href="/" className={classes.link}>about</Link>
+            <div className={`${classes.wrapper} max-width`}>
+                <div className={classes.logoLinksAndSocials}>
+
+                    <Link href="/" className={classes.logo}>
+                        <Image src={logo} alt='logo payAPI' className={classes.logoImg} />
+                    </Link>
+                    <div className={classes.socialsAndLinks}>
+                        <div className={classes.links}>
+                            <Link href='/' className={classes.link}>Home</Link>
+                            <Link href='/' className={classes.link}>Stories</Link>
+                            <Link href='/' className={classes.link}>Features</Link>
+                            <Link href='/' className={classes.link}>Pricing</Link>
+                        </div>
+                        <div className={classes.socialLinks}>
+                            <a href="" className={classes.icon} target='_blank'>
+                                <Image src={iconFacebook} alt='facebook' />
+                            </a>
+                            <a href="" className={classes.icon} target='_blank'>
+                                <Image src={iconYoutube} alt='icon youtube' />
+                            </a>
+                            <a href="" className={classes.icon} target='_blank'>
+                                <Image src={iconTwitter} alt='icon twitter' />
+                            </a>
+                            <a href="" className={classes.icon} target='_blank'>
+                                <Image src={iconPinterest} alt='icon pinterest' />
+                            </a>
+                            <a href="" className={classes.icon} target='_blank'>
+                                <Image src={iconInstagram} alt='icon instagram' />
+                            </a>
+
                         </div>
                     </div>
-                    <div className={classes.contactInformation}>
-                        <p>987 Hillcrest Lane</p>
-                        <p>Irvine, CA</p>
-                        <p>California 92714</p>
-                        <p>Call Us : 949-833-7432</p>
-                    </div>
                 </div>
-                <div className={classes.socialAndCopyrightContainer}>
-                    <div className={classes.socialLinks}>
-                        <a href="" className={classes.icon} target='_blank'>
-                            <Image src={iconFacebook} alt='facebook' width={24} height={24} />
-                        </a>
-                        <a href="" className={classes.icon} target='_blank'>
-                            <Image src={iconPinterest} alt='pinterest' width={24} height={24} />
-                        </a>
-                        <a href="" className={classes.icon} target='_blank'>
-                            <Image src={iconTwitter} alt='pinterest' width={24} height={24} />
-                        </a>
-                    </div>
-                    <div className={classes.copyRight}>
+                <div className={classes.ctaAndCopyright}>
+                    <Link href='' className={`secondary-link dark ${classes.cta}`}>Get an invite</Link>
+
+                    <div className={classes.copyright}>
                         <p>Copyright 2024. All Rights Reserved</p>
                     </div>
                 </div>

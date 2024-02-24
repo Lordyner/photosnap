@@ -361,10 +361,10 @@ a.secondary-link.light::after {
     gap: .5rem
 }
 
-.max-width {
+/* .max-width {
     max-width: 23.438rem;
     margin-inline: auto;
-}
+} */
 
 .overflow-y-hidden {
     overflow-y: hidden;
@@ -454,7 +454,7 @@ a.secondary-link.light::after {
 
 @media screen and (min-width: 1440px) {
     .max-width {
-        max-width: 90rem;
+        max-width: 69.375rem;
         margin-inline: auto;
     }
 

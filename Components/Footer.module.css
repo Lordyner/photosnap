@@ -1,158 +1,139 @@
 .footer {
+
     background-color: var(--pure-black);
     color: var(--pure-white);
-    position: relative;
+
+    padding: 3.5rem 2rem;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 7.438rem;
+}
+
+.ctaAndCopyright {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
-    padding: var(--topAndBotPadding) var(--sidePadding);
+    gap: 2.125rem;
+
+}
+
+.socialsAndLinks {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 3.063rem;
+    padding-top: 2rem;
+}
+
+.logoAndSocial {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .socialLinks {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
     justify-content: center;
+    gap: 0.831rem;
 }
 
 .links {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1.188rem;
+    color: var(--pure-white);
+
 }
 
-.copyRight {
+.link {
+    color: var(--pure-white);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: .75rem;
+    letter-spacing: 0.125rem;
+    line-height: normal;
+    font-family: 'DMSansBold';
+}
+
+.copyright {
     display: flex;
     justify-content: center;
     text-align: center;
-    opacity: .6;
+    opacity: .5;
+    font-size: 0.938rem;
 }
 
-
-.links a,
-.socialLinks a {
-    color: var(--pure-black);
-    text-align: center;
-
-}
 
 .logoImg {
     margin-inline: auto;
 }
 
 
-.contactInformation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: .6;
-    padding-bottom: 1.5rem;
-}
-
-.icon {
-    font-size: 1.5rem;
-
-}
-
-.socialAndCopyrightContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.logoAndLinksContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contactInfoAndLinksContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
 
 
 @media screen and (min-width: 768px) {
+    .footer {
+        padding: 4rem 2.5rem;
 
-    .wrapper {
-        gap: 2rem;
     }
-
-    .socialAndCopyrightContainer {
-        flex-direction: row;
-        justify-content: space-between;
-        min-width: 100%;
-    }
-
-    .contactInfoAndLinksContainer {
-        flex-direction: row;
-        justify-content: space-between;
-        min-width: 100%;
-    }
-
-    .logoAndLinksContainer {
-        justify-content: space-between;
-    }
-
-    .contactInformation {
-        padding-bottom: 0;
-        align-items: flex-end;
-    }
-
-    .logoImg {
-        width: 5.938rem;
-        height: 1.5rem;
-        margin-inline: unset;
-    }
-
-
-}
-
-@media screen and (min-width: 1440px) {
-
 
     .wrapper {
         flex-direction: row;
         justify-content: space-between;
-        align-items: stretch;
-        padding: 2.5rem;
     }
 
-    .logoImg {
-        width: 10rem;
-        height: 2.5rem;
+    .logoLinksAndSocials {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .socialsAndLinks {
+        flex-direction: column;
     }
 
     .links {
-        justify-content: start;
+        flex-direction: row;
+        gap: 1.625rem;
     }
 
-    .contactInfoAndLinksContainer {
-        justify-content: start;
-        gap: 7.5rem;
-        min-width: fit-content;
-    }
-
-    .contactInformation {
-        align-items: start;
-    }
-
-    .socialAndCopyrightContainer {
-        min-width: fit-content;
-        flex-direction: column;
+    .ctaAndCopyright {
         justify-content: space-between;
+        align-items: flex-end;
     }
 
     .socialLinks {
-        justify-content: end;
+        justify-content: start;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .socialsAndLinks {
+        flex-direction: row-reverse;
+        align-items: end;
+        padding-top: 0;
+        gap: 7.813rem;
     }
 
+    .links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
+    .logo {
+        position: relative;
+        top: 1rem;
+    }
+
+    .cta {
+        position: relative;
+        top: 1rem;
+    }
 }
