@@ -103,8 +103,8 @@ h6 {
 
 
 /* Button */
-a.primary-link-light,
-a.primary-link-dark,
+a.primary-link,
+a.primary-link,
 button {
     display: flex;
     justify-content: center;
@@ -121,12 +121,12 @@ button {
     line-height: normal;
 }
 
-a.primary-link-light {
+a.primary-link.light {
     background-color: var(--pure-black);
     color: var(--pure-white);
 }
 
-a.primary-link-dark {
+a.primary-link.dark {
     background-color: var(--pure-white);
     color: var(--pure-black);
 }
@@ -176,6 +176,13 @@ a.secondary-link.light::after {
     background: url('../public/images/shared/desktop/arrow_white.svg') no-repeat;
 }
 
+.switch-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 4rem;
+}
 
 .overlay-burger-menu {
     width: 100%;
@@ -300,6 +307,18 @@ a.secondary-link.light::after {
     opacity: 1 !important;
 }
 
+.periodicity {
+    font-size: 1.125rem;
+    font-family: 'DMSansBold';
+    font-weight: bold;
+    opacity: .5;
+
+}
+
+.periodicity.active {
+    opacity: 1;
+}
+
 
 /* UTILS */
 
@@ -395,6 +414,10 @@ a.secondary-link.light::after {
 .min-width-max-content {
 
     min-width: max-content;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* .max-width {
@@ -493,6 +516,10 @@ a.secondary-link.light::after {
         height: revert-layer;
     }
 
+    .switch-wrapper {
+
+        padding-top: 7rem;
+    }
 
     /* Hero stories */
 

@@ -32,10 +32,10 @@ const Navbar = () => {
 
                         <Link href="/stories" className={classes.link}>Stories</Link>
                         <Link href="/features" className={classes.link}>Features</Link>
-                        <Link href="/" className={classes.link}>Pricing</Link>
+                        <Link href="/pricing" className={classes.link}>Pricing</Link>
                     </div>
                     <div className={`${isMobileResolution ? "display-none" : ""}`}>
-                        <Link href="/" className='primary-link-light'>get an invite</Link>
+                        <Link href="/" className='primary-link light'>get an invite</Link>
                     </div>
 
 
@@ -63,13 +63,13 @@ const Navbar = () => {
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>Features</Link>
 
-                                <Link href="/" className={classes.mobileLink} onClick={() => {
+                                <Link href="/pricing" className={classes.mobileLink} onClick={() => {
                                     toggleMenu();
                                     burger.current.classList.toggle(classes.isActive);
                                 }}>Pricing</Link>
                             </div>
                             <div className={classes.separator} />
-                            <Link href="/" className='primary-link-light'>Get an invite</Link>
+                            <Link href="/" className='primary-link light'>Get an invite</Link>
                         </div>
                     </div>
 

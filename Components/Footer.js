@@ -25,7 +25,7 @@ const Footer = () => {
                             <Link href='/' className={classes.link}>Home</Link>
                             <Link href='/stories' className={classes.link}>Stories</Link>
                             <Link href='/features' className={classes.link}>Features</Link>
-                            <Link href='/' className={classes.link}>Pricing</Link>
+                            <Link href='/pricing' className={classes.link}>Pricing</Link>
                         </div>
                         <div className={classes.socialLinks}>
                             <a href="" className={classes.icon} target='_blank'>

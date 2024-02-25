@@ -15,6 +15,9 @@ export function GlobalContextProvider(props) {
     const [showPopupError, setShowPopupError] = useState();
     const [showPopupContactFormIncorrect, setShowPopupContactFormIncorrect] = useState();
 
+    const [isMonthly, setIsMonthly] = useState(true);
+    const [animatePrice, setAnimatePrice] = useState(false);
+
     const [mobileResolution] = useState(320);
     const [tabletResolution] = useState(768);
     const [desktopResolution] = useState(1440);
@@ -43,7 +46,10 @@ export function GlobalContextProvider(props) {
             isMenuOpen, setIsMenuOpen,
             showPopupContactFormIncorrect, setShowPopupContactFormIncorrect,
             mobileResolution, tabletResolution, desktopResolution,
-            toggleMenu
+            toggleMenu,
+            isMonthly, setIsMonthly,
+            animatePrice, setAnimatePrice
+
         }}>
             {props.children}
         </GlobalContext.Provider>

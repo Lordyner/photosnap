@@ -1,8 +1,21 @@
+import Hero from "@/Components/Hero";
+import Navbar from "@/Components/Navbar";
 import { getLogger } from "@/Logging/log-util";
 import GlobalContext from "@/Store/GlobalContext";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
+import heroMobile from '@/public/images/pricing/mobile/hero.jpg';
+import heroTablet from '@/public/images/pricing/tablet/hero.jpg';
+import heroDesktop from '@/public/images/pricing/desktop/hero.jpg';
+import PriceContainer from "@/Components/PriceContainer";
+import Switch from "@/Components/UI/Switch";
+import { animate } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import Footer from "@/Components/Footer";
+import CTAReminder from "@/Components/CTAReminder";
+import FeaturesComparison from "@/Components/FeaturesComparison";
+
 
 export default function Pricing() {
     /* Logger */
@@ -11,13 +24,13 @@ export default function Pricing() {
 
     /* State */
     const [screenWidth, setScreenWidth] = useState();
+    const [isMonthly, setIsMonthly] = useState(true);
 
     /* Context */
-    const { setIsMobileResolution } = useContext(GlobalContext);
-    const { setIsTabletResolution } = useContext(GlobalContext);
-    const { setIsLaptopResolution } = useContext(GlobalContext);
+    const { setIsMobileResolution, isMobileResolution } = useContext(GlobalContext);
+    const { setIsTabletResolution, isTabletResolution } = useContext(GlobalContext);
     const { setIsDesktopResolution } = useContext(GlobalContext);
-    const { tabletResolution, laptopResolution, desktopResolution } = useContext(GlobalContext);
+    const { tabletResolution, desktopResolution } = useContext(GlobalContext);
     const { setIsLoading } = useContext(GlobalContext);
     const { isMenuOpen } = useContext(GlobalContext);
 
@@ -29,15 +42,16 @@ export default function Pricing() {
         setScreenWidth(window.screen.width);
 
         const isMobile = screenWidth < tabletResolution;
-        const isTablet = screenWidth >= tabletResolution && screenWidth < laptopResolution;
-        const isLaptop = screenWidth >= laptopResolution && screenWidth < desktopResolution;
+        const isTablet = screenWidth >= tabletResolution && screenWidth < desktopResolution;
         const isDesktop = screenWidth >= desktopResolution;
 
         setIsMobileResolution(isMobile);
         setIsTabletResolution(isTablet);
-        setIsLaptopResolution(isLaptop);
         setIsDesktopResolution(isDesktop);
     }
+    const controls = useAnimation();
+
+
 
     useEffect(() => {
         // Handle menu display
@@ -47,8 +61,8 @@ export default function Pricing() {
         // Handle loading spinner
         router.events.on("routeChangeStart", () => setIsLoading(true));
         router.events.on("routeChangeComplete", () => setIsLoading(false));
-        console.log()
-    }, [screenWidth])
+
+    }, [screenWidth, isMonthly])
 
 
     return (
@@ -60,10 +74,29 @@ export default function Pricing() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={`overlay-burger-menu ${isMenuOpen ? 'isActive' : ''}`} />
-            <div>
-                <h1>Pricing page</h1>
+            <Navbar />
+            <Hero image={isMobileResolution ? heroMobile : isTabletResolution ? heroTablet : heroDesktop}
+                alt='man holding a camera in under a sunset'
+                title='Pricing'
+                text="Create a your stories, Photosnap is a platform for photographers and visual storytellers. It's the simple way to create and share your photos."
+                theme='dark'
+                withMainAccent={true}
+                heroGridClass={'textFirst'}
+                mainAccentClass={'smallerAccent'}
+            />
+
+
+            <div className='switch-wrapper'>
+                <span className={`${isMonthly ? 'active' : ''} periodicity`}>Monthly</span>
+                <Switch isMonthly={isMonthly} setIsMonthly={setIsMonthly} />
+                <span className={`${!isMonthly ? 'active' : ''} periodicity`}>Yearly</span>
+
             </div>
 
+            <PriceContainer isMonthly={isMonthly} />
+            <FeaturesComparison />
+            <CTAReminder />
+            <Footer />
 
         </>
     )
