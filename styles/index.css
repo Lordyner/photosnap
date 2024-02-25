@@ -310,7 +310,6 @@ a.secondary-link.light::after {
 .periodicity {
     font-size: 1.125rem;
     font-family: 'DMSansBold';
-    font-weight: bold;
     opacity: .5;
 
 }
@@ -416,14 +415,6 @@ a.secondary-link.light::after {
     min-width: max-content;
 }
 
-.bold {
-    font-weight: bold;
-}
-
-/* .max-width {
-    max-width: 23.438rem;
-    margin-inline: auto;
-} */
 
 .overflow-y-hidden {
     overflow-y: hidden;
