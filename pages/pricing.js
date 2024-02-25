@@ -10,8 +10,6 @@ import heroTablet from '@/public/images/pricing/tablet/hero.jpg';
 import heroDesktop from '@/public/images/pricing/desktop/hero.jpg';
 import PriceContainer from "@/Components/PriceContainer";
 import Switch from "@/Components/UI/Switch";
-import { animate } from "framer-motion";
-import { motion, useAnimation } from "framer-motion";
 import Footer from "@/Components/Footer";
 import CTAReminder from "@/Components/CTAReminder";
 import FeaturesComparison from "@/Components/FeaturesComparison";
@@ -49,7 +47,6 @@ export default function Pricing() {
         setIsTabletResolution(isTablet);
         setIsDesktopResolution(isDesktop);
     }
-    const controls = useAnimation();
 
 
 

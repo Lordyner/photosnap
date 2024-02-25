@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from './Hero.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 const Hero = ({ image, alt, title, text, CTA, theme, withMainAccent, heroGridClass, mainAccentClass }) => {

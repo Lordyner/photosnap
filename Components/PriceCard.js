@@ -1,8 +1,6 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 import classes from './PriceCard.module.css';
 import Link from 'next/link';
-import { motion } from "framer-motion"
-import GlobalContext from '@/Store/GlobalContext';
 
 const PriceCard = ({ title, description, price, mostPopular, isMonthly }) => {
 

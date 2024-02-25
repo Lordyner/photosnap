@@ -4,14 +4,10 @@ import classes from './Navbar.module.css'
 import GlobalContext from '@/Store/GlobalContext';
 import Link from 'next/link';
 import logo from '@/public/images/shared/desktop/logo.svg';
-import { motion, useAnimate } from "framer-motion"
-import { animate } from "framer-motion"
-
 
 const Navbar = () => {
     const burger = useRef();
     const { isMobileResolution } = useContext(GlobalContext);
-    const { isDesktopResolution } = useContext(GlobalContext);
 
     const { isMenuOpen } = useContext(GlobalContext);
     const { toggleMenu } = useContext(GlobalContext);
