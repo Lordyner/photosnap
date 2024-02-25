@@ -132,8 +132,8 @@ a.primary-link.dark {
 }
 
 
-a.primary-link-light:hover,
-a.primary-link-dark:hover {
+a.primary-link.light:hover,
+a.primary-link.dark:hover {
     background-color: var(--light-grey);
     color: var(--pure-black);
 }

@@ -38,13 +38,14 @@
     transition: .4s;
 }
 
-/* .switch input:checked+.slider {
-    background-color: #2196F3;
+.switch input:hover+.slider {
+    background-color: var(--pure-black);
 }
 
-.switch input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
-} */
+.slider:hover:before {
+    background-color: var(--pure-white);
+}
+
 
 .switch input:checked+.slider:before {
     -webkit-transform: translateX(1.9rem);
